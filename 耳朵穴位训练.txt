@@ -1,0 +1,45 @@
+在mmdet里面（转到mmdet目录）终端运行：
+
+1.目标检测算法——RTMDet
+
+python tools/train.py data/rtmdet_tiny_ear.py
+
+2.测试集上评估模型精度
+
+#训练过程中coco_bbox_mAP表现最好的模型
+python tools/test.py data/rtmdet_tiny_ear.py work_dirs/rtmdet_tiny_ear/best_coco_bbox_mAP_epoch_175.pth
+
+#最后一轮的模型
+python tools/test.py data/rtmdet_tiny_ear.py work_dirs/rtmdet_tiny_ear/epoch_200.pth
+
+
+
+
+在mmpose里面（转到mmpose目录）终端运行：
+
+1.关键点检测算法——RTMPose
+
+python tools/train.py data/rtmpose-s-ear.py
+
+2.测试集上评估模型精度
+
+#训练过程中PCK表现最好的模型
+python tools/test.py data/rtmpose-s-ear.py work_dirs/rtmpose-s-ear/best_PCK_epoch_280.pth
+
+#最后一轮的模型
+python tools/test.py data/rtmpose-s-ear.py work_dirs/rtmpose-s-ear/epoch_300.pth
+
+
+
+
+模型轻量化转换：
+
+在mmdet里面（转到mmdet目录）终端运行---
+
+python tools/model_converters/publish_model.py work_dirs/rtmdet_tiny_ear/best_coco_bbox_mAP_epoch_175.pth checkpoint/rtmdet_tiny_ear_epoch_175.pth
+
+
+在mmpose里面（转到mmpose目录）终端运行---
+
+python tools/misc/publish_model.py work_dirs/rtmpose-s-ear/epoch_300.pth checkpoint/rtmpose-s-ear-300.pth
+
