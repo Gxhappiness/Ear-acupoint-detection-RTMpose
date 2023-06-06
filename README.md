@@ -17,3 +17,4 @@ mmdet+mmpose
 
 
 
+mmdet和mmpose安装配置以及config文件具体操作见本人csdn帖：https://bbs.csdn.net/topics/615773306
