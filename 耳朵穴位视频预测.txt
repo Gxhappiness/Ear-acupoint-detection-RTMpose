@@ -1,0 +1,5 @@
+现在终端或者cmd命令行下把目录定位到mmpose下
+
+终端或cmd运行：
+
+python demo/topdown_demo_with_mmdet.py data/rtmdet_tiny_ear.py checkpoint/rtmdet_tiny_ear_epoch_175.pth data/rtmpose-s-ear.py checkpoint/rtmpose-s-ear-300.pth --input data/test_ear/ear1.MP4 --output-root outputs/G2_Video --device cuda:0 --bbox-thr 0.5 --kpt-thr 0.5 --nms-thr 0.3 --radius 6 --thickness 3 --draw-bbox --draw-heatmap --show-kpt-idx
