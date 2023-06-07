@@ -1,0 +1,12 @@
+1.pytroch转onnx：
+
+耳朵目标检测模型---
+
+python tools/deploy.py configs/mmdet/detection/detection_onnxruntime_dynamic.py ../mmdetection/data/rtmdet_tiny_ear.py ../mmdetection/checkpoint/rtmdet_tiny_ear_epoch_175.pth ../mmdetection/data/test_ear/2.JPG --work-dir ../rtmdet2onnx --dump-info
+
+耳朵穴位检测关键点检测模型---
+
+要先将将mmdeploy/configs/mmpose/pose-detection_simcc_onnxruntime_dynamic.py中的input_shape修改为关键点检测模型的输入图像尺寸（看config配置文件rtmpose-s-ear.py中输入图像的尺寸）
+
+python tools/deploy.py configs/mmpose/pose-detection_simcc_onnxruntime_dynamic.py ../mmpose/data/rtmpose-s-ear.py ../mmpose/checkpoint/rtmpose-s-ear-300.pth ../mmpose/data/test_triangle/3.JPG --work-dir ../rtmpose2onnx --dump-info
+

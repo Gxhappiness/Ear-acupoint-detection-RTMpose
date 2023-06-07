@@ -1,0 +1,3 @@
+1.MMPose官方摄像头预测:
+
+python demo/topdown_demo_with_mmdet.py data/rtmdet_tiny_ear.py checkpoint/rtmdet_tiny_ear_epoch_175.pth data/rtmpose-s-triangle.py checkpoint/rtmpose-s-ear-300.pth --input webcam --output-root outputs/C2_Video --device cuda --bbox-thr 0.6 --kpt-thr 0.5 --nms-thr 0.3 --radius 16 --thickness 3 --draw-bbox --draw-heatmap --show-kpt-idx --show 
